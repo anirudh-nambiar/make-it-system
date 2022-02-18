@@ -1,2 +1,2 @@
-# make-it
-Code for hardware control and algorithmic reaction optimization
+# makeit
+Python code to control laboratory hardware for chemical synthesis
