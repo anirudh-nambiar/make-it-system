@@ -29,7 +29,7 @@ class AlicatPressureController:
 		msg = msg.encode('utf-8')
 		self.ser.write(msg)
 
-	def set_pressure(self, unit_id, pressure):
+	def set_pressure(self, pressure, unit_id='A'):
 		"""
 		Args:
 			unit_id (str): unit id for controller (default is 'A')
