@@ -1,6 +1,6 @@
 ## Description
 
-This repository contains code accompanying the following paper on the Make-It robotic flow chemistry platform developed by the Jensen Group at MIT:
+This repository contains code accompanying the following paper on the Make-It robotic flow chemistry platform developed by the Jensen Research Group at MIT:
 
 *Bayesian Optimization of Computer-Proposed Multistep Synthetic Routes on an Automated Robotic Flow Platform* ([preprint](https://doi.org/10.26434/chemrxiv-2022-xl27m))
 
