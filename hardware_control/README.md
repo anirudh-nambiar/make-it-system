@@ -10,7 +10,7 @@ Code was tested using Python version 3.5.
 ## Equipment with Serial Communication Interface
 
 Required Python packages:
-- pySerial (installation commands: `pip install pyserial` or `conda install pyserial`)
+- [pySerial](https://pyserial.readthedocs.io/en/latest/) (installation commands: `pip install pyserial` or `conda install pyserial`)
 
 The following hardware classes utilize the serial communication protocol:
 - `alicat_pressure_controller.py`: control the pressure setpoint of an Alicat pressure controller
@@ -19,7 +19,9 @@ The following hardware classes utilize the serial communication protocol:
 - `vici_pump.py`: set the flow rate of a VICI M Series positive displacement pump
 - `vici_valve.py`: actuate a VICI HPLC sample injection valve
 
-Note: The robot control GUI also requires the tkinter and crcmod Python packages.
+Notes:
+- The robot control GUI also requires the tkinter and crcmod Python packages
+- For controlling a Sierra mass flow controller, see this [repo](https://github.com/patrickcgray/sierra_mfc_controller)
 
 ## Agilent HPLC ChemStation Control
 
