@@ -3,7 +3,7 @@
 This folder contains Python classes developed to interface with common lab equipment for chemical synthesis.
 
 Each Python file contains information regarding the hardware model, manufacturer, and setup. See the end of each file for example code to test hardware control.
-Manuals for the various equipment are compiled in the `manuals` folder. We are not affiliated with any of the equipment manufacturers.
+Manuals for the various equipment are compiled in the `manuals` folder. This is unofficial code and we are not affiliated with any of the equipment manufacturers.
 
 Code was tested using Python version 3.5.
 
