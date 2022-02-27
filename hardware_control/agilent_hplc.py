@@ -2,7 +2,7 @@ import win32ui
 import dde
 import time
 
-class AgilentHPLC:
+class ChemstationController:
 	"""
 	Class containing a DDE server to forward commands to ChemStation software which controls Agilent HPLCs.
 	Dynamic Data Exchange (DDE) is a technology for interprocess communication used in early versions of Microsoft Windows.
@@ -15,17 +15,18 @@ class AgilentHPLC:
 		See manual for more commands.
 	"""
 
-	def __init__(self, chemstation_name=''):
+	def __init__(self, chemstation_name='', log_file='C:/Chem32/1/TEMP/HPCoreLog_Acquisition.svclog'):
 		"""
 		Args:
 			chemstation_name (str): Name of ChemStation DDE client (name format: 'hpcore####').
+			log_file (str): Path to default log file where name of ChemStation DDE client instance is stored.
 		"""
 
 		# Get name of ChemStation DDE client
 		# Every time ChemStation software is opened, a new name is assigned
 		# The code below tries to automatically find this name
 		if chemstation_name == '':
-			with open('C:/Chem32/1/TEMP/HPCoreLog_Acquisition.svclog') as f:
+			with open(log_file) as f:
 				content = f.readlines()
 			anchor = content[0].rfind('ProcessID=')
 			start_char = content[0].find('\"', anchor) + 1
@@ -33,7 +34,7 @@ class AgilentHPLC:
 			self.chemstation_name = 'hpcore' + content[0][start_char:end_char]
 		
 		# If the above code fails, obtain the name manually by typing 'print _ddename$' in Chemstation command line...
-		# and pass name as input argument when initiating AgilentController class
+		# and pass name as input argument when initiating ChemstationController class
 		else:
 			self.chemstation_name = chemstation_name
 		
@@ -105,6 +106,6 @@ class AgilentHPLC:
 # Code to test hardware control
 if __name__ == '__main__':
 
-	chemstation_name = '' # leave blank if extracting automatically, else type 'print _ddename$' in Chemstation command line to get name ('hpcore####')
-	agilent = AgilentHPLC(chemstation_name)
+	chemstation_name = '' # leave blank if extracting automatically, else type 'print _ddename$' in ChemStation command line to get name (format: 'hpcore####')
+	agilent = ChemstationController(chemstation_name)
 	agilent.command_line()
