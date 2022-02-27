@@ -7,7 +7,7 @@ This repository contains code accompanying the following paper on the Make-It ro
 ## Contents
 
 The code is organized into two main folders:
--	`hardware_control` contains Python classes developed to interface with common lab equipment (e.g., pumps, valves, HPLC) for chemical synthesis
+-	`hardware_control` contains Python classes developed to interface with common lab equipment for chemical synthesis (e.g., pumps, valves, HPLC)
 -	`dragonfly_bayesopt_demo` contains an example Jupyter notebook demonstrating how to use the Dragonfly Bayesian optimization algorithm (developed by Kandasamy et al., [paper](https://jmlr.org/papers/v21/18-223.html)) for single- and multi-objective optimization and to visualize response surfaces
 
 Additional documentation is provided in each folder.
